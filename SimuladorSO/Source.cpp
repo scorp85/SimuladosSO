@@ -1,9 +1,10 @@
 #include "SDL.h"
+#include "SDL_ttf.h"
 
 int main(int argc, char* argv[])
 {
 	SDL_Init(SDL_INIT_VIDEO);
-
+	TTF_Init();
 	SDL_Window* window = SDL_CreateWindow
 	("An SDL2 window", // window's title
 		10, 25, // coordinates on the screen, in pixels, of the window's upper left corner
@@ -12,6 +13,7 @@ int main(int argc, char* argv[])
 
 	SDL_Delay(3000); // window lasts 3 seconds
 	SDL_DestroyWindow(window);
+	TTF_Quit();
 	SDL_Quit();
 	return 0;
 }

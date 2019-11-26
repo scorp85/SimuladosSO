@@ -23,5 +23,14 @@
     <None Include="SDL2.dll">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="libfreetype-6.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SDL2_ttf.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="zlib1.dll">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
