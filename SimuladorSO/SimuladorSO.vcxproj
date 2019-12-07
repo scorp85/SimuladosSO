@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CaixaTexto.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,13 @@
     <None Include="SDL2.dll" />
     <None Include="SDL2_ttf.dll" />
     <None Include="zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Hack-Regular.ttf" />
+    <Font Include="Roboto-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CaixaTexto.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
