@@ -21,6 +21,15 @@
     <ClCompile Include="CaixaTexto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Processo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memoria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Disco.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL2.dll">
@@ -46,6 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaixaTexto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Processo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memoria.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Disco.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

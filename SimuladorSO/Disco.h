@@ -1,0 +1,14 @@
+#pragma once
+#include <list>
+#include "Processo.h"
+using std::list;
+/*Uma estrutura de dados para representar o seu disco. Assuma que esse disco
+	tem tamanho ilimitado e que você pode armazenar todos os processos que
+	não cabem na sua memória e que não estão sendo utilizados no disco.*/
+class Disco
+{
+	list<Processo> listaDeProcessos;
+};
+
+hd.listaDeProcessos.push_back()
+hd.listaDeProcessos[2];
