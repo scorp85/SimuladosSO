@@ -1,0 +1,25 @@
+Windows
+Excel
+Outlook
+PowerPoint
+Word
+Chrome
+Explorer
+Defender
+Skype
+Arduino
+3DS Max
+Autocad
+Revit
+jStrobe
+MatLab
+Python
+SketchUp
+SolidWorks
+Cura
+Visual Studio
+CodeBlocks
+Calculadora
+Dark Souls
+Spider Solitaire
+Minesweeper

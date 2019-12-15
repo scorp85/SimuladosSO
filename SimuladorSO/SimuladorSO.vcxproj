@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClCompile Include="CaixaTexto.cpp" />
     <ClCompile Include="Disco.cpp" />
+    <ClCompile Include="ListaProcessos.cpp" />
     <ClCompile Include="Memoria.cpp" />
     <ClCompile Include="Processo.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -148,8 +149,12 @@
   <ItemGroup>
     <ClInclude Include="CaixaTexto.h" />
     <ClInclude Include="Disco.h" />
+    <ClInclude Include="ListaProcessos.h" />
     <ClInclude Include="Memoria.h" />
     <ClInclude Include="Processo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="nomes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,6 @@
 #pragma once
 #include <list>
+#include "Processo.h"
 using std::list;
 /*Uma estrutura de dados para representar a sua memória (o tamanho da 
 	memória é de 1GByte). Essa estrutura de dados pode ser na forma de 
@@ -8,8 +9,16 @@ using std::list;
 	célula da sua memória deverá conter um 1byte, ou seja, caso eu tenha 
 	uma memória de 1Mbyte, eu terei 1024 posições de memória ou 1024 
 	bitmaps caso a implementação seja feita dessa forma.*/
+enum estadoMem
+{
+		VAZIO, OCUPADO
+};
 typedef struct _elem
 {
+	Processo *processo;
+	int indice;
+	int tamanho;
+	estadoMem estado;	
 
 }elem;
 

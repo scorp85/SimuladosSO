@@ -30,6 +30,9 @@
     <ClCompile Include="Disco.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ListaProcessos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL2.dll">
@@ -66,5 +69,13 @@
     <ClInclude Include="Disco.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListaProcessos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="nomes.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
