@@ -3,7 +3,7 @@
 #include "SDL_ttf.h"
 #include <iostream>
 #include "CaixaTexto.h"
-#include "ListaProcessos.h"
+#include "SistemaOperacional.h"
 #include <thread>
 #include <mutex>
 #include <chrono>
@@ -15,7 +15,7 @@ using namespace std::chrono;
 std::mutex mtx;
 
 //Função usada na thread
-void threadGeraProcesso(ListaProcessos& listaP, bool& quit)
+void threadGeraProcesso(SistemaOperacional& listaP, bool& quit)
 {
 	while (!quit)
 	{
@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 	CaixaTexto CPU2(renderer, font, 20, "CPU2", SCREEN_WIDTH - SCREEN_HEIGHT / 6 - 40, SCREEN_HEIGHT / 2 + 120, SCREEN_HEIGHT / 6, SCREEN_HEIGHT / 6, corTexto, corCaixa);
 
 	//Criação da lista de processos em execução
-	ListaProcessos processosExecutando;
+	SistemaOperacional processosExecutando;
 	//Criação de uma caixa de texto para representar a lista de processos em execução
 	CaixaTexto caixaEmExec(renderer, font, 15, "xxxxxx", 30, 300, 400, 40, corTexto, corCaixa);
 

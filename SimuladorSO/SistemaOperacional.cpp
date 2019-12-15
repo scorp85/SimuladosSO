@@ -1,8 +1,8 @@
-#include "ListaProcessos.h"
+#include "SistemaOperacional.h"
 #include <random>
 
 
-ListaProcessos::ListaProcessos()
+SistemaOperacional::SistemaOperacional()
 {
 	std::ifstream MyReadFile("nomes.txt");
 	std::string myText;
@@ -14,14 +14,14 @@ ListaProcessos::ListaProcessos()
 	MyReadFile.close();
 }
 
-void ListaProcessos::geraProcessoNumerado(int nInstrucoes, int memoria)
+void SistemaOperacional::geraProcessoNumerado(int nInstrucoes, int memoria)
 {
 	static int i = 0;
 	lista.push_back(Processo("Processo " + std::to_string(i), nInstrucoes, memoria));
 	++i;
 }
 
-void ListaProcessos::geraProcessoAleatorio()
+void SistemaOperacional::geraProcessoAleatorio()
 {
 	static std::default_random_engine generator;
 	static std::uniform_int_distribution<int> geradorInstr(1, 200);

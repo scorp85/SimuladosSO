@@ -5,11 +5,12 @@
 #include <vector>
 #include <cstdlib>
 #include <fstream>
+#include "Memoria.h"
 
-class ListaProcessos
+class SistemaOperacional
 {
 public:
-	ListaProcessos();
+	SistemaOperacional();
 	void geraProcessoNumerado(int nInstrucoes, int memoria);
 	void geraProcessoAleatorio();
 	auto begin() { return lista.begin(); }
@@ -19,4 +20,5 @@ private:
 
 	std::list<Processo> lista;
 	std::vector<std::string> listaDeNomes;
+	Memoria ram;
 };

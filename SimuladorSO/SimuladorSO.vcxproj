@@ -131,7 +131,7 @@
   <ItemGroup>
     <ClCompile Include="CaixaTexto.cpp" />
     <ClCompile Include="Disco.cpp" />
-    <ClCompile Include="ListaProcessos.cpp" />
+    <ClCompile Include="SistemaOperacional.cpp" />
     <ClCompile Include="Memoria.cpp" />
     <ClCompile Include="Processo.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -149,7 +149,7 @@
   <ItemGroup>
     <ClInclude Include="CaixaTexto.h" />
     <ClInclude Include="Disco.h" />
-    <ClInclude Include="ListaProcessos.h" />
+    <ClInclude Include="SistemaOperacional.h" />
     <ClInclude Include="Memoria.h" />
     <ClInclude Include="Processo.h" />
   </ItemGroup>
