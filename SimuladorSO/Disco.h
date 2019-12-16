@@ -7,6 +7,8 @@ using std::list;
 	não cabem na sua memória e que não estão sendo utilizados no disco.*/
 class Disco
 {
+public:
+	void salvaEmDisco(Processo* processo);
 	//Lista de Processos guardados em hd(swap).
-	list<Processo> Processos;
+	list<Processo> armazenamento;
 };

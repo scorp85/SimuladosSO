@@ -64,6 +64,8 @@ int main(int argc, char* argv[])
 	//Criação de uma caixa de texto para representar a lista de processos em execução
 	CaixaTexto caixaEmExec(renderer, font, 15, "xxxxxx", 30, 300, 400, 40, corTexto, corCaixa);
 
+	//Criação de uma caixa de texto para representar a lista de processos na RAM
+	CaixaTexto caixaEmRam(renderer, font, 15, "xxxxxx", 20, SCREEN_HEIGHT / 16, SCREEN_WIDTH - 60, SCREEN_HEIGHT / 6, corTexto, corCaixa, true);
 	
 
 	

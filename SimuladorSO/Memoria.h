@@ -1,6 +1,8 @@
 #pragma once
 #include <list>
 #include "Processo.h"
+#include "Disco.h"
+
 using std::list;
 /*Uma estrutura de dados para representar a sua memória (o tamanho da 
 	memória é de 1GByte). Essa estrutura de dados pode ser na forma de 
@@ -28,8 +30,12 @@ class Memoria
 {
 public:
 	Memoria();
-	void bestFit(Processo &novo);
+	void bestFit(Disco& hd, Processo &novo);
+	
 private:
+	void swap(Disco& hd, Processo& novo);
+	//Une um par de elementos vazios
+	void uneElemVazios(list<elem>::iterator primeiro);
 	//listas encadeadas, contanto que consiga representar a quantia de bytes que está sendo alocada e seus devidos espaços.
 	list<elem> listaMem;
 };

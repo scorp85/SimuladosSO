@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <fstream>
 #include "Memoria.h"
+#include "Disco.h"
 
 class SistemaOperacional
 {
@@ -21,4 +22,5 @@ private:
 	std::list<Processo> lista;
 	std::vector<std::string> listaDeNomes;
 	Memoria ram;
+	Disco hd;
 };

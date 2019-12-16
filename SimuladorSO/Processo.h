@@ -14,11 +14,14 @@ public:
 	Processo(std::string n, int i, int m):nome(n), instrucoes(i), memoria(m)
 	{
 		estado = NOVO;
+		instrucoesExecutadas = 0;
 	}
 	//quantia de memória (em bytes) que ele ocupa enquanto está sendo executado
 	int memoria;
 	//quantia de instruções que o programa possui
 	int instrucoes;
+	//quantia de instruções que já foram executadas
+	int instrucoesExecutadas;
 	//tipo do processo(I/O ou Programa)
 	EstadoProcesso estado;
 	std::string nome;
