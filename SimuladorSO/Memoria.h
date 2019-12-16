@@ -26,14 +26,11 @@ typedef struct _elem
 
 class Memoria
 {
-	Memoria()
-	{
-		tamanho = 1073741824;
-		lista.push_back(elem{ 0,1073741824, VAZIO, nullptr });
-	}
-	//o tamanho da memória é de 2^30 Bytes,
-	int tamanho;
+public:
+	Memoria();
+	void bestFit(Processo &novo);
+private:
 	//listas encadeadas, contanto que consiga representar a quantia de bytes que está sendo alocada e seus devidos espaços.
-	list<elem> lista;
+	list<elem> listaMem;
 };
 

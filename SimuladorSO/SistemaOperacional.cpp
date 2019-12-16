@@ -19,6 +19,8 @@ void SistemaOperacional::geraProcessoNumerado(int nInstrucoes, int memoria)
 	static int i = 0;
 	lista.push_back(Processo("Processo " + std::to_string(i), nInstrucoes, memoria));
 	++i;
+
+	ram.bestFit(lista.back());
 }
 
 void SistemaOperacional::geraProcessoAleatorio()
@@ -29,4 +31,5 @@ void SistemaOperacional::geraProcessoAleatorio()
 	static std::uniform_int_distribution<int> geradorNome(0, listaDeNomes.size() - 1);
 	std::string nomeEscolhido = listaDeNomes[geradorNome(generator)];
 	lista.push_back(Processo(nomeEscolhido.c_str(), geradorInstr(generator), geradorMem(generator)));
+	ram.bestFit(lista.back());
 }
