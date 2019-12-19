@@ -17,10 +17,11 @@ public:
 	auto begin() { return lista.begin(); }
 	auto end() { return lista.end(); }
 
-private:
-
 	std::list<Processo> lista;
-	std::vector<std::string> listaDeNomes;
+
 	Memoria ram;
 	Disco hd;
+private:
+	std::vector<std::string> listaDeNomes;
+
 };

@@ -4,6 +4,7 @@ Outlook
 PowerPoint
 Word
 Chrome
+Firefox
 Explorer
 Defender
 Skype
@@ -17,9 +18,9 @@ Python
 SketchUp
 SolidWorks
 Cura
-Visual Studio
 CodeBlocks
 Calculadora
+Steam
 Dark Souls
-Spider Solitaire
 Minesweeper
+Notepad++

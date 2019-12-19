@@ -21,7 +21,7 @@ typedef struct _elem
 {
 	int indice;
 	int tamanho;
-	estadoMem estado;
+	estadoMem estadoMemoria;
 	Processo *processo;
 
 }elem;
@@ -30,13 +30,13 @@ class Memoria
 {
 public:
 	Memoria();
-	void bestFit(Disco& hd, Processo &novo);
-	
-private:
-	void swap(Disco& hd, Processo& novo);
-	//Une um par de elementos vazios
-	void uneElemVazios(list<elem>::iterator primeiro);
+	void bestFit(Disco& hd, Processo *novo);
 	//listas encadeadas, contanto que consiga representar a quantia de bytes que está sendo alocada e seus devidos espaços.
+	void uneElemVazios(list<elem>::iterator primeiro);
 	list<elem> listaMem;
+private:
+	void swap(Disco& hd, Processo *novo);
+	//Une um par de elementos vazios
+	
 };
 

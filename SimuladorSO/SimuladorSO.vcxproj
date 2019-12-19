@@ -73,6 +73,10 @@
     <IncludePath>C:\SDL\SDL2_ttf-2.0.15\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\SDL\SDL2_ttf-2.0.15\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\SDL\SDL2_ttf-2.0.15\include;C:\SDL\SDL2-2.0.10\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL\SDL2_ttf-2.0.15\lib\x64;C:\SDL\SDL2-2.0.10\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -126,10 +130,12 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaixaTexto.cpp" />
+    <ClCompile Include="Cpu.cpp" />
     <ClCompile Include="Disco.cpp" />
     <ClCompile Include="SistemaOperacional.cpp" />
     <ClCompile Include="Memoria.cpp" />
@@ -148,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaixaTexto.h" />
+    <ClInclude Include="Cpu.h" />
     <ClInclude Include="Disco.h" />
     <ClInclude Include="SistemaOperacional.h" />
     <ClInclude Include="Memoria.h" />

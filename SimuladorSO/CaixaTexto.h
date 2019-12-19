@@ -20,18 +20,15 @@ public:
 		caixa.w = tamanhoX;
 		tamanhoFonte.h = tamanhoF;
 		tamanhoFonte.w = tamanhoF * texto.size();
+		tamanhoFonte.x = pX + (tamanhoX - tamanhoFonte.w) / 2;
+		tamanhoFonte.y = pY + (tamanhoY - tamanhoF) / 2;
 		if (flip)
 		{
-			tamanhoFonte.x = pX + (tamanhoX - tamanhoFonte.w) / 2;
-			tamanhoFonte.y = pY + (tamanhoF * (texto.size() - 1)) / 2;
+			tamanhoFonte.h = caixa.w;
+			tamanhoFonte.w = caixa.w * texto.size();
+			tamanhoFonte.x = 0;
+			tamanhoFonte.y = 0;
 		}
-		else
-		{
-			tamanhoFonte.x = pX + (tamanhoX - tamanhoFonte.w) / 2;
-			tamanhoFonte.y = pY + (tamanhoY -tamanhoF)/2;
-		}
-		centro.x = tamanhoFonte.w/2;
-		centro.y = tamanhoFonte.h/2;
 	}
 
 	void setTexto(const string tex)
@@ -65,18 +62,25 @@ public:
 		mTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
 		SDL_FreeSurface(textSurface);
 	}
+	*/
 	void setTamanho(int novoTamanhoX, int novoTamanhoY)
 	{
 		caixa.w = novoTamanhoX;
 		caixa.h = novoTamanhoY;
-	}
-*/
-	void setPos(int x, int y)
-	{
-		caixa.x = x;
-		caixa.y = y;
 		tamanhoFonte.x = caixa.x + (caixa.w - tamanhoFonte.w) / 2;
 		tamanhoFonte.y = caixa.y + (caixa.h - tamanhoFonte.h) / 2;
+	}
+	int getAlturaCaixa() { return caixa.h; }
+	int getLarguraCaixa() { return caixa.w; }
+
+	void setPos(int x, int y)
+	{
+		int difX = x - caixa.x;
+		int difY = y - caixa.y;
+		caixa.x += difX;
+		caixa.y += difY;
+		tamanhoFonte.x += difX;
+		tamanhoFonte.y += difY;
 	}
 
 	int getPosX() {
@@ -92,14 +96,16 @@ public:
 		SDL_SetRenderDrawColor(renderer, corCaixa.r, corCaixa.g, corCaixa.b, corCaixa.a);
 		SDL_RenderFillRect(renderer, &caixa);
 		SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
-		SDL_RenderDrawRect(renderer, &caixa);
+		static SDL_Rect contorno;
+		contorno = SDL_Rect{ caixa.x,caixa.y,caixa.w + 1,caixa.h + 1 };
+		SDL_RenderDrawRect(renderer,&contorno );
 
 		SDL_SetRenderDrawColor(renderer, corTexto.r, corTexto.g, corTexto.b, corTexto.a);
 		SDL_RendererFlip flipType = SDL_FLIP_NONE;
 		if(flip)
-			SDL_RenderCopyEx(renderer, mTexture, NULL, &tamanhoFonte,-90.0,&centro, flipType);
+			SDL_RenderCopyEx(renderer, mTexture, NULL, &tamanhoFonte,-90.0,NULL, flipType);
 		else
-			SDL_RenderCopyEx(renderer, mTexture, NULL, &tamanhoFonte, 0.0, &centro, flipType);
+			SDL_RenderCopyEx(renderer, mTexture, NULL, &tamanhoFonte, 0.0, NULL, flipType);
 	}
 
 	void free()
@@ -116,7 +122,6 @@ private:
 	SDL_Color corCaixa;
 	SDL_Rect caixa;
 	string texto;
-	SDL_Point centro;
 	bool flip;
 };
 

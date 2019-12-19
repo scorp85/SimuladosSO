@@ -2,5 +2,5 @@
 
 void Disco::salvaEmDisco(Processo* processo)
 {
-	armazenamento.push_back(*processo);
+	armazenamento.insert(processo);
 }
